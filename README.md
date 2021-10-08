@@ -9,33 +9,39 @@ For more about Homebrew, a package manager for for macOS and Linux, see the [Hom
 ## Usage
 
 
-To use the OPCR Homebrew tap, register it using:
-
-	brew tap opcir-io/tap
-
-
 #### Installation 
 
 To install use: 
 
-	brew install opcr-io <brew name>
-
-or
 
 	brew install opcr-io/tap/<brew name>
+
+
+For example to install the OPCR policy CLI:
+
+	brew install opcr-io/tap/policy
 
 
 #### Update
 
 To update use:
 
-	brew upgrade opcr-io <brew name>
+	brew upgrade opcr-io/tap/<brew name>
+
+For example to update the OPCR policy CLI to the latest version:
+
+	brew upgrade opcr-io/tap/policy
+	
 
 ### Uninstall
 
 To uninstall use:
 
-	brew uninstall opcr-io <brew name>
+	brew uninstall opcr-io/tap/<brew name>
+
+So to uninstall the policy CLI use:
+
+	brew uninstall opcr-io/tap/policy
 
 
 ## Available brews:
