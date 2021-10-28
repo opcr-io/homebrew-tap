@@ -5,29 +5,29 @@
 class Policy < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://aserto.com/"
-  version "0.0.54"
+  version "0.0.55"
   license "Apache License Version 2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.0.54/policy0.0.54_darwin_x86_64.zip"
-      sha256 "80dbcbb9c3c26b10d3788c6f90af08735efaaae8dcc5e677cad3f5affa247965"
+      url "https://github.com/opcr-io/policy/releases/download/v0.0.55/policy0.0.55_darwin_x86_64.zip"
+      sha256 "64bf29545bf82c35cd4725cbe0a4cd0c165e7624fe258d94ecfc461185c5c40c"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/opcr-io/policy/releases/download/v0.0.54/policy0.0.54_darwin_arm64.zip"
-      sha256 "d356137940a6f6f729210679bfb4d6daadae16f76bb4f762ff2c2155b2e50725"
+      url "https://github.com/opcr-io/policy/releases/download/v0.0.55/policy0.0.55_darwin_arm64.zip"
+      sha256 "2b03757e723a10c31313c1f8f7c1314a2912c24bab5bb40514bed439da46d15b"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.0.54/policy0.0.54_linux_x86_64.zip"
-      sha256 "04a1401ab4e7318b7864dc6c8507ac097aaf6b5fec194eb423c73577090b689e"
+      url "https://github.com/opcr-io/policy/releases/download/v0.0.55/policy0.0.55_linux_x86_64.zip"
+      sha256 "310a2a536d6305aedb3e8128b65b4663fd3cd5bae610b8c75848784fdca284a9"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/opcr-io/policy/releases/download/v0.0.54/policy0.0.54_linux_arm64.zip"
-      sha256 "90700a57324c0f72c573b243eda50eba3a4480b55f66e4c0fad1cf80f32e5997"
+      url "https://github.com/opcr-io/policy/releases/download/v0.0.55/policy0.0.55_linux_arm64.zip"
+      sha256 "b7a3dd077c4ba2105432288890ed7d1c250b7e05fe162914ef64fbbef010520c"
     end
   end
 
