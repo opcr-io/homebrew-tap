@@ -7,7 +7,6 @@ class Policy < Formula
   homepage "https://aserto.com/"
   version "0.0.55"
   license "Apache License Version 2.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
