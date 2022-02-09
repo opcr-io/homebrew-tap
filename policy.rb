@@ -5,21 +5,21 @@
 class Policy < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://aserto.com/"
-  version "0.1.4"
+  version "0.1.5"
   license "Apache License Version 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.4/policy0.1.4_darwin_arm64.zip"
-      sha256 "020573d5ac40461539fad913c84d77726f2bc33781e2045951cf5f72dea5ae97"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.5/policy0.1.5_darwin_arm64.zip"
+      sha256 "4971f6bec023aa832b6995279d28f13f737d4ffe7714c6ec047f9086659483e1"
 
       def install
         bin.install "policy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.4/policy0.1.4_darwin_x86_64.zip"
-      sha256 "d85547c60d7a226ef7f94ed2719fb3a51edc2ea7eee4ae750a6bad18c04a6bf4"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.5/policy0.1.5_darwin_x86_64.zip"
+      sha256 "ee2b1b3aabda9b0ef0d278e395856f3d9931f656a62e3cadb1f5dd88b234ea94"
 
       def install
         bin.install "policy"
@@ -28,17 +28,17 @@ class Policy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.4/policy0.1.4_linux_arm64.zip"
-      sha256 "e8f6d4e1bc50fad088bedc9beba4ca60195bb51e2dff78407afaa84496def401"
+    if Hardware::CPU.intel?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.5/policy0.1.5_linux_x86_64.zip"
+      sha256 "7c02a3acfe0442b483d03f3a7d52dd7596450fca29b690e35f02133144d6cad3"
 
       def install
         bin.install "policy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.4/policy0.1.4_linux_x86_64.zip"
-      sha256 "be6b6e5220a182981f847c72b4f46cda17c1ff97538747b57b974f92cfe49914"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.5/policy0.1.5_linux_arm64.zip"
+      sha256 "5ba18e72e35228818993660161ce9484aa745f28441514655a1a9c6dca9ed9b8"
 
       def install
         bin.install "policy"
