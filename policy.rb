@@ -5,21 +5,21 @@
 class Policy < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://aserto.com/"
-  version "0.1.9"
+  version "0.1.10"
   license "Apache License Version 2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.9/policy0.1.9_darwin_x86_64.zip"
-      sha256 "fd11a182a193b64bdab03fa715cc8df658d1070ecfa52a3d7f62670b8f6844bb"
+    if Hardware::CPU.arm?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.10/policy0.1.10_darwin_arm64.zip"
+      sha256 "7559181dfd09e460abd7df785f3b926eaf0f02fd592324a97637e71e5abede4a"
 
       def install
         bin.install "policy"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.9/policy0.1.9_darwin_arm64.zip"
-      sha256 "df52448fca938ac67d496b9160f90ca484f27ba2d737503efb33f0d53effaec5"
+    if Hardware::CPU.intel?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.10/policy0.1.10_darwin_x86_64.zip"
+      sha256 "3be2c237551c16d6436a3dfd5ea671bd49d429557efb6065deea3bebc30b2b67"
 
       def install
         bin.install "policy"
@@ -29,16 +29,16 @@ class Policy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.9/policy0.1.9_linux_arm64.zip"
-      sha256 "33cc4b281415a2ca540724b9334d2f50f08de43a897a5ed7f373cfd15ff179f3"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.10/policy0.1.10_linux_arm64.zip"
+      sha256 "00f0008736f59368e338a3ad25efc4f9828e8c29deb8c8d2c102d9517d5c42f1"
 
       def install
         bin.install "policy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.9/policy0.1.9_linux_x86_64.zip"
-      sha256 "b9f02c11318472795e2776fb67aa1d3f6adf29ab1d3d658a25c9dfeb1e4283aa"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.10/policy0.1.10_linux_x86_64.zip"
+      sha256 "20644d9e018ec5139f48d295a051cfb3583c55ce2d077dd4d749ec4930c26007"
 
       def install
         bin.install "policy"
