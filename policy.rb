@@ -5,21 +5,21 @@
 class Policy < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://aserto.com/"
-  version "0.1.31"
+  version "0.1.32"
   license "Apache License Version 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.31/policy0.1.31_darwin_arm64.zip"
-      sha256 "792bca64e334767dc1462fff680b77ebb24280013449870e911a46827a3f8d43"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.32/policy0.1.32_darwin_arm64.zip"
+      sha256 "62ad14ca387a24c6496903742785a03ed9236c131814521b4c2cd1a5dcfefc60"
 
       def install
         bin.install "policy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.31/policy0.1.31_darwin_x86_64.zip"
-      sha256 "62da87366d85c841ed117a76986f2a78d61392e51faa6137d94b6bfbfd112f8c"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.32/policy0.1.32_darwin_x86_64.zip"
+      sha256 "011b1e8b31a5ce6059499c37046d700b1401fe1c24a2f9bd7f43a17b88523ad0"
 
       def install
         bin.install "policy"
@@ -29,16 +29,16 @@ class Policy < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.31/policy0.1.31_linux_x86_64.zip"
-      sha256 "f891359616ead58a1233394379db00519f13abdf5cd5f57f9e5834d96c942186"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.32/policy0.1.32_linux_x86_64.zip"
+      sha256 "cdc064885bcee5912348a474f9ff437ebf7fdc9eed6bae2026cf7a204d37ffdc"
 
       def install
         bin.install "policy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.31/policy0.1.31_linux_arm64.zip"
-      sha256 "4e8b3cbe80174afc6e37c3976e9375f1015ecca894286e58ee1376c633490e0d"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.32/policy0.1.32_linux_arm64.zip"
+      sha256 "bcd209257ba41af3e29f490e5ac657ac9b4cb0bdf1ed463ae9c3a9a2b271e995"
 
       def install
         bin.install "policy"
