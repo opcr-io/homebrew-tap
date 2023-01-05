@@ -5,21 +5,21 @@
 class Policy < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://aserto.com/"
-  version "0.1.45"
+  version "0.1.46"
   license "Apache License Version 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.45/policy0.1.45_darwin_arm64.zip"
-      sha256 "90ed4efbb7e9f7b61d5a7249bf44d1b4a119eb97fbbf318af361f9d947f47b96"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.46/policy0.1.46_darwin_arm64.zip"
+      sha256 "98a40605520227a1dbaf8abc4128789bb960ff557b6561f642381c1d86284698"
 
       def install
         bin.install "policy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.45/policy0.1.45_darwin_x86_64.zip"
-      sha256 "f54961eb9b2a676bfc5b216d9ff79b227d3b7fef3ff8bc74017e072b0bb7a20c"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.46/policy0.1.46_darwin_x86_64.zip"
+      sha256 "55bd9c28e8cd3b2c42eb0cc44244cfde56e2787b68b3049136d7d4b6912ce1f2"
 
       def install
         bin.install "policy"
@@ -28,17 +28,17 @@ class Policy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.45/policy0.1.45_linux_x86_64.zip"
-      sha256 "fe5c2cafc79bcd468b79d98d0f202d10f5a1fd5f13d0371115add4cb4b410876"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.46/policy0.1.46_linux_arm64.zip"
+      sha256 "03fca15e476a47561ebf3e1bf1318e541ebf70a1adfbfcdbca180e1a41da5adc"
 
       def install
         bin.install "policy"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.45/policy0.1.45_linux_arm64.zip"
-      sha256 "4fd5ef21c34393364359c1b6ea43f3ce83cdb5126ef57aa3fd83776e44d1920c"
+    if Hardware::CPU.intel?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.46/policy0.1.46_linux_x86_64.zip"
+      sha256 "60756ad97984f9fa8e920f45ea8dbbb107d839405d7d06a39d538241e58c4687"
 
       def install
         bin.install "policy"
