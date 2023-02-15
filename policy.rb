@@ -5,21 +5,21 @@
 class Policy < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://aserto.com/"
-  version "0.1.48"
+  version "0.1.49"
   license "Apache License Version 2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.48/policy0.1.48_darwin_arm64.zip"
-      sha256 "093f8c419daa4eef35eda5fb0eb7793492bec36ab37a1d87c08e33c439280273"
+    if Hardware::CPU.intel?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.49/policy0.1.49_darwin_x86_64.zip"
+      sha256 "66e79788c2285d2be98266200b49223c165216859a943b8132694a22b6af980d"
 
       def install
         bin.install "policy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.48/policy0.1.48_darwin_x86_64.zip"
-      sha256 "1c9a10dd2e86a1cf94a676da823f70e43cfce489bb58eef09d569955de57f885"
+    if Hardware::CPU.arm?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.49/policy0.1.49_darwin_arm64.zip"
+      sha256 "911110b1319fe86faf04b273a93722a8f33ffdb85554aae007856e17101e8534"
 
       def install
         bin.install "policy"
@@ -28,17 +28,17 @@ class Policy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.48/policy0.1.48_linux_x86_64.zip"
-      sha256 "267bbdffd9f2716b814fb88467a173366ea174c1ed757eddacdc1e435f65541c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.49/policy0.1.49_linux_arm64.zip"
+      sha256 "3e9fedd954874874ae14eae26190bcd43714feb833fc154af314b347747f8d51"
 
       def install
         bin.install "policy"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.48/policy0.1.48_linux_arm64.zip"
-      sha256 "6ca63376674d67b9ea1a4ba1e3945571144a1352fc6483af4286cd0e85f85ea2"
+    if Hardware::CPU.intel?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.49/policy0.1.49_linux_x86_64.zip"
+      sha256 "0d3a5832718ec8f91be8a12a37c8f3dae62454f9750ad40d4fbf9514688c4b09"
 
       def install
         bin.install "policy"
