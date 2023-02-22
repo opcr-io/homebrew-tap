@@ -5,21 +5,21 @@
 class Policy < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://aserto.com/"
-  version "0.1.49"
+  version "0.1.50"
   license "Apache License Version 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.49/policy0.1.49_darwin_x86_64.zip"
-      sha256 "66e79788c2285d2be98266200b49223c165216859a943b8132694a22b6af980d"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.50/policy0.1.50_darwin_x86_64.zip"
+      sha256 "66f6f629bc495812a6d09924ba110ff1c7a42bfe739b61e9923c487378e87b36"
 
       def install
         bin.install "policy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.49/policy0.1.49_darwin_arm64.zip"
-      sha256 "911110b1319fe86faf04b273a93722a8f33ffdb85554aae007856e17101e8534"
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.50/policy0.1.50_darwin_arm64.zip"
+      sha256 "93e7009abc4ec84dd0b7ca4704545302062bf3ccac5b8866347ff310ffd8d91c"
 
       def install
         bin.install "policy"
@@ -28,17 +28,17 @@ class Policy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.49/policy0.1.49_linux_arm64.zip"
-      sha256 "3e9fedd954874874ae14eae26190bcd43714feb833fc154af314b347747f8d51"
+    if Hardware::CPU.intel?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.50/policy0.1.50_linux_x86_64.zip"
+      sha256 "e19852a3f3b870a1db14c3e0f5d156e8254da7c4946c2afd45a7092abcccb9d0"
 
       def install
         bin.install "policy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.1.49/policy0.1.49_linux_x86_64.zip"
-      sha256 "0d3a5832718ec8f91be8a12a37c8f3dae62454f9750ad40d4fbf9514688c4b09"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/opcr-io/policy/releases/download/v0.1.50/policy0.1.50_linux_arm64.zip"
+      sha256 "12d36b61a1865bc31a669934d36a4c241ef1994c45d08bbca27341a5600b1da3"
 
       def install
         bin.install "policy"
