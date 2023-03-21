@@ -46,6 +46,7 @@ So to uninstall the policy CLI use:
 
 ## Available brews:
 
-| Brew name                                     | Installation                      | Descriptions    |
-| ----------------------------------------------| ----------------------------------|---------------- |
-| [policy](https://github.com/opcr-io/policy)   | `brew install opcr-io/tap/policy` | OPCR policy CLI |                   
+| Brew name                                     | Installation                        | Descriptions                       |
+| ----------------------------------------------| ------------------------------------|----------------------------------- |
+| [policy](https://github.com/opcr-io/policy)   | `brew install opcr-io/tap/policy`   | OPCR policy CLI                    |       
+| [policy-rc](https://github.com/opcr-io/policy)| `brew install opcr-io/tap/policy-rc`| OPCR policy CLI release candidates |           
