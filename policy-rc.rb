@@ -5,21 +5,21 @@
 class PolicyRc < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://aserto.com/"
-  version "0.2.0-rc6"
+  version "0.2.0-rc7"
   license "Apache License Version 2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.0-rc6/policy0.2.0-rc6_darwin_arm64.zip"
-      sha256 "f22419523940468cca50f36c060c52ba3a38ee2a6a037ce336918432a7258723"
+    if Hardware::CPU.intel?
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.0-rc7/policy0.2.0-rc7_darwin_x86_64.zip"
+      sha256 "de072ee90a87e499d187ecd93a3010e1d0ff2aa8ac0229632d31c9eaa9c1b216"
 
       def install
         bin.install "policy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.0-rc6/policy0.2.0-rc6_darwin_x86_64.zip"
-      sha256 "362bb086576f4666226f0f5cc810730f7119889c8e847d9111eb9dbb247ef1aa"
+    if Hardware::CPU.arm?
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.0-rc7/policy0.2.0-rc7_darwin_arm64.zip"
+      sha256 "f6bf188c40d192577705b8f7cf6c3784eb3a190fbba7e02d724d8508036e21e4"
 
       def install
         bin.install "policy"
@@ -28,17 +28,17 @@ class PolicyRc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.0-rc6/policy0.2.0-rc6_linux_arm64.zip"
-      sha256 "accf1d3cdbb8b32075b241109b8f725c49861ccf1b42ac392dbcb357099d863c"
+    if Hardware::CPU.intel?
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.0-rc7/policy0.2.0-rc7_linux_x86_64.zip"
+      sha256 "313d1fa10295926b21baa4107dcc2c14bd3dd4bd947df0d52f80414255c2c7b6"
 
       def install
         bin.install "policy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.0-rc6/policy0.2.0-rc6_linux_x86_64.zip"
-      sha256 "3ffad5acc5eacfe768154576976e64e4fee36cade8eddbea98f9271874647fc2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.0-rc7/policy0.2.0-rc7_linux_arm64.zip"
+      sha256 "de9bef00b05a0afba5b67ed173a66becfc7b321010d22c33f6d7e2cdc7cf8d23"
 
       def install
         bin.install "policy"
