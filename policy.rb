@@ -5,21 +5,21 @@
 class Policy < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://aserto.com/"
-  version "0.2.3"
+  version "0.2.4"
   license "Apache License Version 2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.3/policy0.2.3_darwin_arm64.zip"
-      sha256 "cdff25ca6ca69756895074c2d343854e514ac481002db282252996bbf8d349b8"
+    if Hardware::CPU.intel?
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.4/policy0.2.4_darwin_x86_64.zip"
+      sha256 "4d29ce62609b2b81b0aef52ad0acd3de87554589f9c8dad0405e9ee6358fd84c"
 
       def install
         bin.install "policy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.3/policy0.2.3_darwin_x86_64.zip"
-      sha256 "9d7dc355cd5cdd3badadc9a3b93782b9c08ec2cd8d4263a6e1b463c11c4b73b5"
+    if Hardware::CPU.arm?
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.4/policy0.2.4_darwin_arm64.zip"
+      sha256 "b1c210def18ba8ca72a91143bb87d70229417c5113c9052370ea088cba1e534d"
 
       def install
         bin.install "policy"
@@ -28,17 +28,17 @@ class Policy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.3/policy0.2.3_linux_arm64.zip"
-      sha256 "170823fbbf691c2ad62756f6e500bfb5f4ef5f9b0eb4aa22aee7db60f9c8c064"
+    if Hardware::CPU.intel?
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.4/policy0.2.4_linux_x86_64.zip"
+      sha256 "15d3dc7592e5f4ac46875fd82606d71e759c9c53bcd2977b262ded9f331686d9"
 
       def install
         bin.install "policy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.3/policy0.2.3_linux_x86_64.zip"
-      sha256 "4751b3d63724a03824379c8bec9b56c2ace829e7b89f146f5582a866874f67c7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.4/policy0.2.4_linux_arm64.zip"
+      sha256 "20e0c63a3cc46254cb2c31f9940df553e65cf9e1f2436c04d194eb76ce0835e3"
 
       def install
         bin.install "policy"
