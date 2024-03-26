@@ -5,21 +5,21 @@
 class Policy < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://opcr.io/"
-  version "0.2.11"
+  version "0.2.12"
   license "Apache License Version 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.11/policy0.2.11_darwin_arm64.zip"
-      sha256 "1396012954a3e700f0cbf6575cfc4046330bd709044f1f4dd41c3e33de489a8a"
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.12/policy0.2.12_darwin_arm64.zip"
+      sha256 "da90eb2983540a88bf9990f0e1b9ef06ff97523cde4be9ed691052574a2ffe34"
 
       def install
         bin.install "policy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.11/policy0.2.11_darwin_x86_64.zip"
-      sha256 "5dac975e398d186ea8a931bc9b0dbe2567a5ef259673e0b404b1fd9baae77ad8"
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.12/policy0.2.12_darwin_x86_64.zip"
+      sha256 "8f0cc1903e8bb77973bc2bb93b47f6258ea0e82ef436ce07f9bf28e3668ea6bf"
 
       def install
         bin.install "policy"
@@ -28,17 +28,17 @@ class Policy < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.11/policy0.2.11_linux_x86_64.zip"
-      sha256 "4e5b4ad493caefbe66c25f5b1e8f85c9875d614d6c2053f5c6a60a4fba0fb7b8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.12/policy0.2.12_linux_arm64.zip"
+      sha256 "9f267eb3bd7457c444e4ce1e1fd3a9bde12b6f92fd96ecaadd24f9ca9b7c275f"
 
       def install
         bin.install "policy"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.11/policy0.2.11_linux_arm64.zip"
-      sha256 "72d2af47e87bc8ca812fc045fb45fd8bc1fdd569fc439a4de59a39b88232d64a"
+    if Hardware::CPU.intel?
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.12/policy0.2.12_linux_x86_64.zip"
+      sha256 "91de2e925b8c8cc0afdc581471a3b60cb2beda525b3392d9cfbe89a13e63b393"
 
       def install
         bin.install "policy"
