@@ -5,21 +5,21 @@
 class Policy < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://opcr.io/"
-  version "0.2.21"
+  version "0.2.22"
   license "Apache License Version 2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.21/policy0.2.21_darwin_x86_64.zip"
-      sha256 "f38b4b12a6787fb53cd32dbffea68e48b3bff60b1384b67c1b33f84de61acc3d"
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.22/policy0.2.22_darwin_x86_64.zip"
+      sha256 "74eeb659ff98a7b8ff0ed051935acdb6bbae4dc279c5e0a2d70faf2afcff456d"
 
       def install
         bin.install "policy"
       end
     end
     on_arm do
-      url "https://github.com/opcr-io/policy/releases/download/v0.2.21/policy0.2.21_darwin_arm64.zip"
-      sha256 "6aad982eeefdb5579ec03ac8426f0e08b390319c6500d95b6197378bc5bd779f"
+      url "https://github.com/opcr-io/policy/releases/download/v0.2.22/policy0.2.22_darwin_arm64.zip"
+      sha256 "e70211f9094bd0e405c0d733d579b39331a6bf1b87f95ee0414f5d546e3f9ab4"
 
       def install
         bin.install "policy"
@@ -30,8 +30,8 @@ class Policy < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/opcr-io/policy/releases/download/v0.2.21/policy0.2.21_linux_x86_64.zip"
-        sha256 "24b1a78aa97580394278318d7e8a2bc175048fbef2c04e5bffe578d8ea5272e0"
+        url "https://github.com/opcr-io/policy/releases/download/v0.2.22/policy0.2.22_linux_x86_64.zip"
+        sha256 "a1a89e1f05a2483d4ceed66c1dc910cfae8f6c229b68d4e6583fa959b592fd3d"
 
         def install
           bin.install "policy"
@@ -40,8 +40,8 @@ class Policy < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/opcr-io/policy/releases/download/v0.2.21/policy0.2.21_linux_arm64.zip"
-        sha256 "cc53b4ef6317eec023b6f13d6c378f2f60c66d527ad0bdeb8fb335b75826c152"
+        url "https://github.com/opcr-io/policy/releases/download/v0.2.22/policy0.2.22_linux_arm64.zip"
+        sha256 "133b0c4358dc96a1fdfeacffb012a06618bb69ac6402c21baff997195a1b5441"
 
         def install
           bin.install "policy"
