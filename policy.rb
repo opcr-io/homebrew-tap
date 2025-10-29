@@ -5,21 +5,21 @@
 class Policy < Formula
   desc "policy CLI for building and managing authorization policies"
   homepage "https://opcr.io/"
-  version "0.3.1"
+  version "0.3.2"
   license "Apache License Version 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/opcr-io/policy/releases/download/v0.3.1/policy0.3.1_darwin_x86_64.zip"
-      sha256 "b6b9b9603afd5eb50de070d92fe1b83c5a02060e73dba4293939c5a8ef891dd2"
+      url "https://github.com/opcr-io/policy/releases/download/v0.3.2/policy0.3.2_darwin_x86_64.zip"
+      sha256 "0c59b03479bf45417b06b6543685f195acc13c422161b54acdbb167de896283c"
 
       def install
         bin.install "policy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/opcr-io/policy/releases/download/v0.3.1/policy0.3.1_darwin_arm64.zip"
-      sha256 "b2838cc58e4975c7bea423ee17bfc81b0dc88c686fc7c15dabfce04d821cab20"
+      url "https://github.com/opcr-io/policy/releases/download/v0.3.2/policy0.3.2_darwin_arm64.zip"
+      sha256 "647ad551def170d8176f2f99dd5a6a8a993d2a98d2828dd6f3b5d4112858b3da"
 
       def install
         bin.install "policy"
@@ -30,8 +30,8 @@ class Policy < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/opcr-io/policy/releases/download/v0.3.1/policy0.3.1_linux_x86_64.zip"
-        sha256 "f9e76d96b24ed225fc005c4e7856c352280a8aa9d37aa8a1f3bb91572b8b186a"
+        url "https://github.com/opcr-io/policy/releases/download/v0.3.2/policy0.3.2_linux_x86_64.zip"
+        sha256 "ff54a43bbffea0a83125601013a0e123dae5a18abdba30d5bfc6692a3bc1bf15"
 
         def install
           bin.install "policy"
@@ -40,8 +40,8 @@ class Policy < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/opcr-io/policy/releases/download/v0.3.1/policy0.3.1_linux_arm64.zip"
-        sha256 "4f411e5d95e5291b5d12306ee45ec09cb1225092cd9e5bb3152ae963b11b2057"
+        url "https://github.com/opcr-io/policy/releases/download/v0.3.2/policy0.3.2_linux_arm64.zip"
+        sha256 "7dcfd0dda471c8d758813469501c5b037a548877b64d4c306a19200bf9bbea4d"
 
         def install
           bin.install "policy"
