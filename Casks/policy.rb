@@ -15,12 +15,12 @@ cask "policy" do
     on_intel do
       url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_darwin_amd64.zip",
         verified: "github.com/opcr-io/policy"
-      sha256 "3d72666e54abe8c5cdb0e3d3549f95993a3ad0de0f9b3a2423aec0fa5625d57e"
+      sha256 "9f7682e0dbff87c7d6fc4e2695ee484ab1bf88bf841e908c79388d85412d03fe"
     end
     on_arm do
       url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_darwin_arm64.zip",
         verified: "github.com/opcr-io/policy"
-      sha256 "d1c159298961fd2f1ba07aebecaaed2836c078e24495e5428aa8d95f844c0c0b"
+      sha256 "fe8a0de1a4c83a210811f00b6e9536ba2bffdf9a63e36f10394b801fbbf4b2d9"
     end
   end
 
@@ -28,12 +28,12 @@ cask "policy" do
     on_intel do
       url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_linux_amd64.zip",
         verified: "github.com/opcr-io/policy"
-      sha256 "a740c3cfbcf4e8318f0ef0d51d1fe8eb58183217420a4d1db4fc2236a4783668"
+      sha256 "c0600c1c9c0abc8c704d12f3b95e12d2c39706ce31d76b076b46e61227339e92"
     end
     on_arm do
       url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_linux_arm64.zip",
         verified: "github.com/opcr-io/policy"
-      sha256 "28a02cbc2a09db0dfae4f0b61eedb420424c6162c95aec53cfe5231bb07b7350"
+      sha256 "137014466e4e9c3040ee3488d45577e32cda1e1595e2715c5a6c9709fde109b5"
     end
   end
 
