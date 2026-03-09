@@ -2,7 +2,7 @@
 
 # homebrew-tap
 
-Welcome to the [Open Policy Registry](https://openpolicyregistry.io) (OPCR) Homebrew Tap
+Welcome to the [Open Policy Containers](https://openpolicycontainers.com) (OPCR) Homebrew Tap
 
 For more about Homebrew, a package manager for for macOS and Linux, see the [Homebrew](https://brew.sh/) website.
 
@@ -13,23 +13,28 @@ For more about Homebrew, a package manager for for macOS and Linux, see the [Hom
 
 To install use: 
 
-	brew install --cask policy
+```console
+$ brew install --cask opcr-io/tap/policy
+```
 
 #### Update
 
 To update use:
 
-	brew upgrade --cask policy
+```console
+$ brew upgrade policy
+```
 
 ### Uninstall
 
 To uninstall use:
 
-	brew uninstall --cask policy
-
+```console
+$ brew uninstall --cask opcr-io/tap/policy
+```
 
 ## Available brews:
 
-| Brew name                                     | Installation                  | Descriptions                       |
-| ----------------------------------------------| ------------------------------|----------------------------------- |
-| [policy](https://github.com/opcr-io/policy)   | `brew install -cask policy`   | OPCR policy CLI                    |
+| Brew name                                   | Installation                             | Descriptions                       |
+| --------------------------------------------| -----------------------------------------|----------------------------------- |
+| [policy](https://github.com/opcr-io/policy) | `brew install --cask opcr-io/tap/policy` | OPCR policy CLI                    |
