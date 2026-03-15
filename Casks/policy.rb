@@ -3,7 +3,7 @@ cask "policy" do
   name "policy"
   desc "Policy CLI"
   homepage "https://openpolicycontainers.com"
-  version "0.3.4"
+  version "0.3.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "policy" do
     on_intel do
       url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_darwin_amd64.zip",
         verified: "github.com/opcr-io/policy"
-      sha256 "753e07bc278637fe579de39603e83b87f6cd94ae4863c7476fb8d04955bd2e08"
+      sha256 "facc9c4a48b1c08a1eb954ddb7352e428e51c5988a12db5870c7d69f46187c98"
     end
     on_arm do
       url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_darwin_arm64.zip",
         verified: "github.com/opcr-io/policy"
-      sha256 "aed432eab9b87d3912e5b60b2fe07462854bdc143a40e4975cd8dea81fa4e0e3"
+      sha256 "5614c7f524c7fc5f57b45ab1eb86dc4a168ccd36e88b99ba8eaa2f96ba490173"
     end
   end
 
@@ -28,12 +28,12 @@ cask "policy" do
     on_intel do
       url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_linux_amd64.zip",
         verified: "github.com/opcr-io/policy"
-      sha256 "c59a7d2a59249ffb4f90d488bb3e0c19789243d3b66eca127d4b4cb14928734a"
+      sha256 "197ad7cb1ddec44878ce2a37e8f72b36a9e8f74cd57dcc6d94140858c31b0fd4"
     end
     on_arm do
       url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_linux_arm64.zip",
         verified: "github.com/opcr-io/policy"
-      sha256 "19dc77971c89bc85700f80667f053cd14fab0d4ee3adaac3dc91e1a7ec296c4d"
+      sha256 "5de78e3ca944145444124fe7cb1589e4d78a7d4f195e6373ccb3c6e4fd84d50d"
     end
   end
 
