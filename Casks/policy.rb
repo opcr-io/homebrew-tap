@@ -5,31 +5,27 @@ cask "policy" do
   on_macos do
     on_arm do
       sha256 "e322f4910e864756e6941d2e70ce4d54abaf0439d86d066bf3a0e33e2a51fa7b"
-      url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_darwin_arm64.zip",
-        verified: "github.com/opcr-io/policy"
+      url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_darwin_arm64.zip"
     end
     on_intel do
       sha256 "328a8e2740bbf28201100a6f95748290f185d15f908810e68e70d35fe32bf726"
-      url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_darwin_amd64.zip",
-        verified: "github.com/opcr-io/policy"
+      url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_darwin_amd64.zip"
     end
   end
   on_linux do
     on_arm do
       sha256 "e1c18f1c46d8ca049812430472aa96a6474d050671493b86ea981b8edee304cc"
-      url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_linux_arm64.zip",
-        verified: "github.com/opcr-io/policy"
+      url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_linux_arm64.zip"
     end
     on_intel do
       sha256 "3cb2ff4b93215c59107aeb89b6f7050514c965aad96686261780f18ae272c68c"
-      url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_linux_amd64.zip",
-        verified: "github.com/opcr-io/policy"
+      url "https://github.com/opcr-io/policy/releases/download/v#{version}/policy_linux_amd64.zip"
     end
   end
 
   name "policy"
   desc "Policy CLI"
-  homepage "https://openpolicycontainers.com"
+  homepage "https://openpolicycontainers.com/"
 
   livecheck do
     skip "Auto-generated on release."
@@ -37,9 +33,9 @@ cask "policy" do
 
   binary "policy"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/policy"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}/policy"]
     end
   end
 
